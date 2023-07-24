@@ -1,0 +1,25 @@
+.nav{
+    height: 100px;
+    
+    font-family: 'Lucida Sans';
+    font-size: large;
+    display: flex;
+    justify-content: space-between;
+}
+.locations{
+    display: flex;
+    justify-content: space-evenly;
+    
+    
+    
+}
+.loco{
+    padding: 20px;
+    margin-left: 1em;
+    border: solid black;
+    border-radius: 15px;
+}
+.home{
+    padding-left: 30%;
+
+}
