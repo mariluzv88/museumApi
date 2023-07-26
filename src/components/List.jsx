@@ -6,7 +6,7 @@ import { useEffect,useState } from 'react'
 
 
 
-function Museums() {
+function List() {
   const [location,setLocation]= useState(null)
     const getInfo = async() => {
         const response = await axios.get('https://data.cityofnewyork.us/resource/fn6f-htvy.json')
@@ -19,7 +19,8 @@ function Museums() {
     },[])
     
       return (
-        
+        <div>
+        <header>LOCATIONS</header>
         <div className='location'>
                 
                   {location? location.map((element,i)=>{
@@ -32,7 +33,7 @@ function Museums() {
                     
                   }):<p>Loading</p>}
                 
-                
+          </div>      
         </div>
        
          
@@ -44,4 +45,6 @@ function Museums() {
    
    
 }
-export default Museums
+
+
+export default List

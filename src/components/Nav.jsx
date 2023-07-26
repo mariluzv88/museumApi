@@ -7,8 +7,11 @@ function Nav() {
         <Link to='/'>
         <div>home page</div>
         </Link>
+        <Link to='/checklist'>
+        <div> Museum Checklist</div>
+        </Link>
         <Link to='/museums'>
-        <div> Museums</div>
+        <div> Museum Locations</div>
         </Link>
         
     </div>
