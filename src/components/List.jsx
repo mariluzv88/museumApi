@@ -2,13 +2,14 @@ import React from 'react'
 import axios from 'axios'
 import { useEffect,useState,useContext } from 'react'
 import { AppContext } from '../contexts/App_context'
+import Listed from './Listed'
 
 
 
 
 
 function List(props) {
-    // let {setVisit}=useContext(AppContext)
+    let {setVisit}=useContext(AppContext)
   const [location,setLocation]= useState(null)
     const getInfo = async() => {
         const response = await axios.get('https://data.cityofnewyork.us/resource/fn6f-htvy.json')
@@ -27,9 +28,11 @@ function List(props) {
                 
                   {location? location.map((element,i)=>{
                     return <div 
-                    //  onClick={()=>{
-                    //     setVisit(props.muse)
-                    //    }} 
+                     onClick={(muse)=>{
+                        setVisit(location.data)
+                        return <div> <Listed muse={muse}/></div>
+                       }}
+                       
                        className='loco' key={i}><h1>Name:{element.name}</h1>
                     <h3>Address:{element.adress1}</h3>
                     <h3>City:{element.city}</h3>

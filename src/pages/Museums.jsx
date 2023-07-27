@@ -23,7 +23,8 @@ function Museums() {
         <div className='location'>
                 
                   {location? location.map((element,i)=>{
-                    return <div className='loco' key={i}><h1>Name:{element.name}</h1>
+                    return <div className='loco' key={i}>
+                      <h1>Name:{element.name}</h1>
                     <h3>Address:{element.adress1}</h3>
                     <h3>City:{element.city}</h3>
                     <h3>Zip Code:{element.zip}</h3>

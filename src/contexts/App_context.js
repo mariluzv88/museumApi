@@ -3,12 +3,12 @@ import axios from "axios";
 export const AppContext = createContext()
   
 
-function AppContextProvider(props) {
+const AppContextProvider = (props) => {
     const getInfo = async() => {
         const response = await axios.get('https://data.cityofnewyork.us/resource/fn6f-htvy.json')
-        const info = response.data
-        console.log(info)
-        setLocation(info)
+        // const info = response.data
+        // console.log(info)
+        setLocation(response)
       }
     useEffect(()=>{
       getInfo()
@@ -18,7 +18,7 @@ function AppContextProvider(props) {
     
     return(<AppContext.Provider value={{
         visit,
-        setVisit,
+        setVisit,getInfo,
         location,
         setLocation
     }}>
