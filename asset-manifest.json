@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/museumApi/static/css/main.ebfe76fd.css",
+    "main.js": "/museumApi/static/js/main.10b34045.js",
+    "index.html": "/museumApi/index.html",
+    "main.ebfe76fd.css.map": "/museumApi/static/css/main.ebfe76fd.css.map",
+    "main.10b34045.js.map": "/museumApi/static/js/main.10b34045.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ebfe76fd.css",
+    "static/js/main.10b34045.js"
+  ]
+}
